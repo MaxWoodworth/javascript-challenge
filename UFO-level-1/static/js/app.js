@@ -1,8 +1,8 @@
 // from data.js
-var tableData = data;
-console.log("data :: ", data);
+const tableData = data;
+
 // YOUR CODE HERE!
-const tableBody = d3.select("#ufo-table tbody");
+const tbody = d3.select("tbody");
 
 // tableBody.html = "";
 //let tableRow = tableBody.append("tr");
@@ -25,15 +25,21 @@ const tableBody = d3.select("#ufo-table tbody");
   //"Duration",
   //"Comments",
 //];
-//Start Loop
-data.forEach((dataRow) => {
-  const row = tablebody.append("tr");
-  Object.defineProperties(datarow).forEach((value) => {
-   var cell = row.append("td");
-    cell.text(value);
-  });
-});
+function table(data) {
+  
+//Without this reset it kept adding the extra table on to the arleady existing table.  
+  tbody.html("");
 
+//simple error I wasnt paying attention to the caps in the R in row
+  //Start Loop
+  data.forEach((dataRow) => {
+    const row = tbody.append("tr");
+    Object.values(dataRow).forEach((value) => {
+    let cell = row.append("td");
+     cell.text(value);
+    });
+  });
+}
 //data.forEach((dataRow) => {
   //let tableRow = tableBody.append("tr");
  // cols.forEach((col) => tableRow.append("th").text(dataRow[col2Data[col]]));
@@ -52,11 +58,18 @@ form.on("click", runEnter);
 //add final function to create new outputed table
 function runEnter() {
   //keep page from reseting
-  d3.event.preventDefault();
+  //d3.event.preventDefault();
   //select input and get html node
-  var inputElement = de.select("#datetime");
+  const date = d3.select("#datetime").property("value");
   //value of property input value
-  var inputvalue = inputElement.property("value");
-  console.log(userinput)
-  console.log(inputvalue)
+  //var inputvalue = inputElement.property("value");
+  //console.log(userinput)
+  //console.log(inputvalue)
+  let finaltable = tableData;
+  if (date) {
+    finaltable = finaltable.filter(row => row.datetime === date);
+  }
+    table(finaltable);
 }
+d3.selectAll("#but").on("click", runEnter);
+table(tableData);
