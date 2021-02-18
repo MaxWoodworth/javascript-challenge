@@ -42,6 +42,9 @@ data.forEach((dataRow) => {
 //Button time, userimput will denote the date entered
 let userimput = data;
 //change name of button from filter_btn to button
-let button = d3.select("#but")
-let form = d3.select("#form")
+let button = d3.select("#but");
+let form = d3.select("#form");
 
+//handlers
+button.on("click", runEnter);
+form.on("click", runEnter);
