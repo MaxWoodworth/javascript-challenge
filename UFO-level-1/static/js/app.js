@@ -48,3 +48,15 @@ let form = d3.select("#form");
 //handlers
 button.on("click", runEnter);
 form.on("click", runEnter);
+
+//add final function to create new outputed table
+function runEnter() {
+  //keep page from reseting
+  d3.event.preventDefault();
+  //select input and get html node
+  var inputElement = de.select("#datetime");
+  //value of property input value
+  var inputvalue = inputElement.property("value");
+  console.log(userinput)
+  console.log(inputvalue)
+}
