@@ -34,8 +34,8 @@ data.forEach((dataRow) => {
   });
 });
 
-data.forEach((dataRow) => {
-  let tableRow = tableBody.append("tr");
-  cols.forEach((col) => tableRow.append("th").text(dataRow[col2Data[col]]));
-});
+//data.forEach((dataRow) => {
+  //let tableRow = tableBody.append("tr");
+ // cols.forEach((col) => tableRow.append("th").text(dataRow[col2Data[col]]));
+//});
 //
