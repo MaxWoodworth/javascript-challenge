@@ -7,3 +7,5 @@ I forgot to reset the page at first and everytime I would attempt to filter it w
 I also struggled with the nitty gritty things I always do. Staring at a line of code not understanding why it isnt defined when its simply a missing capital letter rather than a lower case.
 
 All in all I thought that this assignment was a bit of a slower easier assignment than the sqlalchemy assignment but I know this was just a lead in to the plotly homework.
+
+I am not sure that when I have more time I will even attempt to do level 2. I think I would rather do the bonus for the plotly.
