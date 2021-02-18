@@ -38,4 +38,8 @@ data.forEach((dataRow) => {
   //let tableRow = tableBody.append("tr");
  // cols.forEach((col) => tableRow.append("th").text(dataRow[col2Data[col]]));
 //});
-//
+
+//Button time, userimput will denote the date entered
+let userimput = data;
+//change name of button from filter_btn to button
+let button = d3.select("#but")
