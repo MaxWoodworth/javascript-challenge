@@ -27,8 +27,12 @@ const tableBody = d3.select("#ufo-table tbody");
 //];
 //Start Loop
 data.forEach((dataRow) => {
-  const row = tablebody.append("tr")
-})
+  const row = tablebody.append("tr");
+  Object.defineProperties(datarow).forEach((value) => {
+   var cell = row.append("td");
+    cell.text(value);
+  });
+});
 
 data.forEach((dataRow) => {
   let tableRow = tableBody.append("tr");
