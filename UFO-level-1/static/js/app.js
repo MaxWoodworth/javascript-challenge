@@ -43,3 +43,5 @@ data.forEach((dataRow) => {
 let userimput = data;
 //change name of button from filter_btn to button
 let button = d3.select("#but")
+let form = d3.select("#form")
+
